@@ -126,15 +126,15 @@ export function Cinematic() {
         {/* edge vignette for legibility */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_60%,rgba(0,0,0,0.55)_100%)]" />
 
-        {/* centered gear title that pops + fades */}
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-6">
+        {/* bottom-left gear title that pops + fades */}
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-end justify-start p-8 md:p-14">
           {GEARS.map((g, i) => (
             <h2
               key={i}
               ref={(el) => {
                 caps.current[i] = el;
               }}
-              className="font-comic stroke-ink text-glow absolute text-center text-fg will-change-transform text-[clamp(3rem,12vw,9rem)] leading-[0.85] tracking-wide"
+              className="font-comic stroke-ink text-glow absolute bottom-8 left-8 origin-bottom-left text-left text-fg will-change-transform text-[clamp(2.5rem,9vw,7rem)] leading-[0.85] tracking-wide md:bottom-14 md:left-14"
               style={{ opacity: 0 }}
             >
               {g.title}
