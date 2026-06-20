@@ -101,10 +101,10 @@ export function Cinematic() {
       className="cine-root relative"
       style={{ minHeight: "720vh" }}
     >
-      <div className="cine-stage relative flex h-screen items-center justify-center overflow-hidden bg-black">
+      <div className="cine-stage relative flex h-screen h-[100dvh] items-center justify-center overflow-hidden bg-black">
         <video
           ref={video}
-          className="cine-video absolute inset-0 h-full w-full object-contain"
+          className="cine-video absolute inset-0 h-full w-full object-cover md:object-contain"
           src="/video/cinematic-scrub.mp4"
           poster="/video/cine-poster.jpg"
           muted
@@ -119,7 +119,7 @@ export function Cinematic() {
           <img
             src="/video/cine-poster.jpg"
             alt="Monkey D. Luffy"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover md:object-contain"
           />
         </div>
 
@@ -146,7 +146,7 @@ export function Cinematic() {
       <style>{`
         @media (prefers-reduced-motion: reduce) {
           .cine-root { min-height: auto !important; }
-          .cine-stage { position: static; height: 100vh; }
+          .cine-stage { position: static; height: 100dvh; }
           .cine-video { display: none; }
           .cine-fallback { display: flex !important; }
         }
